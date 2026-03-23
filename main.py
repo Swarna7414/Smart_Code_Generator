@@ -20,7 +20,11 @@ app = FastAPI(title="Self-Improving Coding Agent API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://swarna7414.github.io",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
