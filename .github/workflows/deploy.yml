@@ -25,7 +25,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global credential.helper store
 
-          echo "https://sai582:${HF_TOKEN}@huggingface.co" > ~/.git-credentials
+          echo "https://SaiSankarSwarna:${HF_TOKEN}@huggingface.co" > ~/.git-credentials
 
           git remote add hf https://huggingface.co/spaces/SaiSankarSwarna/Smart_Code_Generator
 
