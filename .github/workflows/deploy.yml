@@ -1,0 +1,29 @@
+name: Deploy Backend to Hugging Face Spaces
+
+on:
+  push:
+    branches:
+      - Production
+
+jobs:
+  deploy:
+    name: Push to Hugging Face Space
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config --global user.email "ci@github.com"
+          git config --global user.name "GitHub Actions"
+
+          git remote add hf https://SaiSankarSwarna:${HF_TOKEN}@huggingface.co/spaces/SaiSankarSwarna/Smart_Code_Generator
+
+          git push hf HEAD:main --force
