@@ -23,7 +23,10 @@ jobs:
         run: |
           git config --global user.email "ci@github.com"
           git config --global user.name "GitHub Actions"
+          git config --global credential.helper store
 
-          git remote add hf https://SaiSankarSwarna:${HF_TOKEN}@huggingface.co/spaces/SaiSankarSwarna/Smart_Code_Generator
+          echo "https://SaiSankarSwarna:${HF_TOKEN}@huggingface.co" > ~/.git-credentials
+
+          git remote add hf https://huggingface.co/spaces/SaiSankarSwarna/Smart_Code_Generator
 
           git push hf HEAD:main --force

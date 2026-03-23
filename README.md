@@ -1,14 +1,27 @@
 ---
 title: Smart Code Generator
 emoji: 🤖
-colorFrom: cyan
-colorTo: blue
+colorFrom: blue
+colorTo: indigo
 sdk: docker
 app_port: 7860
 pinned: false
 ---
 
 # Smart Code Generator — Backend
+
+<div align="center">
+
+![Title](https://img.shields.io/badge/Smart_Code_Generator-🤖-blue?style=for-the-badge)
+![SDK](https://img.shields.io/badge/SDK-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Port](https://img.shields.io/badge/App_Port-7860-indigo?style=for-the-badge)
+![Model](https://img.shields.io/badge/Model-LLaMA_3.3_70B-blueviolet?style=for-the-badge)
+![Framework](https://img.shields.io/badge/Framework-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+</div>
+
+---
 
 This is the backend for the Smart Code Generator project. It is built with FastAPI and uses the Groq API to run LLaMA 3.3 70B. The idea is straightforward — you describe a coding task in plain English, the system writes the code, runs it, checks if it works, and if it does not, it reads the error and tries again. It keeps doing this until the code passes or it runs out of attempts. Alongside the agent loop, it also handles code fixing, code explanation, and a conversational chat assistant, all streamed back to the client in real time.
 

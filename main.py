@@ -20,7 +20,11 @@ app = FastAPI(title="Self-Improving Coding Agent API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://swarna7414.github.io",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -80,8 +84,18 @@ def _make_serialisable(obj):
 
 
 @app.get("/")
-def health():
+def root():
     return {"status": "ok", "model": MODEL}
+
+
+@app.get("/health")
+def health():
+    groq_configured = bool(GROQ_API_KEY)
+    return {
+        "status": "ok" if groq_configured else "degraded",
+        "model": MODEL,
+        "groq_configured": groq_configured,
+    }
 
 
 @app.post("/api/run-agent")
