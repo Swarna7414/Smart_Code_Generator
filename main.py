@@ -80,8 +80,18 @@ def _make_serialisable(obj):
 
 
 @app.get("/")
-def health():
+def root():
     return {"status": "ok", "model": MODEL}
+
+
+@app.get("/health")
+def health():
+    groq_configured = bool(GROQ_API_KEY)
+    return {
+        "status": "ok" if groq_configured else "degraded",
+        "model": MODEL,
+        "groq_configured": groq_configured,
+    }
 
 
 @app.post("/api/run-agent")
