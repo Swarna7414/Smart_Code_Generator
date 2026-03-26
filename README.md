@@ -21,9 +21,9 @@ pinned: false
 
 </div>
 
-| title | emoji | colorFrom | colorTo | sdk | app_port | pinned |
+| title | colorFrom | colorTo | sdk | app_port | pinned |
 |---|---|---|---|---|---|---|
-| Smart Code Generator | 🤖 | blue | indigo | docker | 7860 | false |
+| Smart Code Generator| blue | indigo | docker | 7860 | false |
 
 ---
 
