@@ -6,7 +6,7 @@
 
 <div align="center">
 
-![Title](https://img.shields.io/badge/Smart_Code_Generator-🤖-blue?style=for-the-badge)
+![Title](https://img.shields.io/badge/Smart_Code_Generator-blue?style=for-the-badge)
 ![SDK](https://img.shields.io/badge/SDK-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Port](https://img.shields.io/badge/App_Port-7860-indigo?style=for-the-badge)
 ![Model](https://img.shields.io/badge/Model-LLaMA_3.3_70B-blueviolet?style=for-the-badge)
