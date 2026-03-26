@@ -21,6 +21,10 @@ pinned: false
 
 </div>
 
+| title | emoji | colorFrom | colorTo | sdk | app_port | pinned |
+|---|---|---|---|---|---|---|
+| Smart Code Generator | 🤖 | blue | indigo | docker | 7860 | false |
+
 ---
 
 This is the backend for the Smart Code Generator project. It is built with FastAPI and uses the Groq API to run LLaMA 3.3 70B. The idea is straightforward — you describe a coding task in plain English, the system writes the code, runs it, checks if it works, and if it does not, it reads the error and tries again. It keeps doing this until the code passes or it runs out of attempts. Alongside the agent loop, it also handles code fixing, code explanation, and a conversational chat assistant, all streamed back to the client in real time.
