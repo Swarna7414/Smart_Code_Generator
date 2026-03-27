@@ -2,7 +2,7 @@
 |----------------------|------------|----------|--------|----------|--------|
 | Smart Code Generator | blue       | indigo   | docker | 7860     | false  |
 
-# Smart Code Generator — Backend
+# Smart Code Generator  Backend
 
 <div align="center">
 
@@ -16,7 +16,7 @@
 </div>
 ---
 
-This is the backend for the Smart Code Generator project. It is built with FastAPI and uses the Groq API to run LLaMA 3.3 70B. The idea is straightforward — you describe a coding task in plain English, the system writes the code, runs it, checks if it works, and if it does not, it reads the error and tries again. It keeps doing this until the code passes or it runs out of attempts. Alongside the agent loop, it also handles code fixing, code explanation, and a conversational chat assistant, all streamed back to the client in real time.
+This is the backend for the Smart Code Generator project. It is built with FastAPI and uses the Groq API to run LLaMA 3.3 70B. The idea is straightforward you describe a coding task in plain English, the system writes the code, runs it, checks if it works, and if it does not, it reads the error and tries again. It keeps doing this until the code passes or it runs out of attempts. Alongside the agent loop, it also handles code fixing, code explanation, and a conversational chat assistant, all streamed back to the client in real time.
 
 ---
 
@@ -46,7 +46,7 @@ The backend is designed around a few core ideas.
 
 The main one is the self-improving agent loop. When you send it a task, it classifies what kind of task it is, generates Python code using the language model, actually executes that code on the server, and checks the result. If the code fails, it reads the error, sends everything back to the model for reflection, and generates a fixed version. This cycle repeats until the code works or the iteration limit is reached.
 
-For tasks that involve multiple programming languages or comparisons — things like "compare sorting in Python and Java" — it switches to analysis mode instead. In that mode, it generates a structured response with working code examples in each language, a comparison, and a recommendation, without trying to execute anything.
+For tasks that involve multiple programming languages or comparisons  things like "compare sorting in Python and Java"  it switches to analysis mode instead. In that mode, it generates a structured response with working code examples in each language, a comparison, and a recommendation, without trying to execute anything.
 
 The other endpoints handle more focused jobs. The code fixer takes broken code, scans it for bugs and issues, and returns a corrected version with explanations. The code explainer walks through any snippet in plain language, covering what each part does, how data flows through it, and what concepts are at play. The chat assistant lets you have a back-and-forth conversation either in a debugging mode or a teaching mode.
 
