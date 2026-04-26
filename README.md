@@ -1,8 +1,15 @@
-| Title                 | Color From | Color To | SDK    | App Port | Pinned |
-|----------------------|------------|----------|--------|----------|--------|
-| Smart Code Generator | blue       | indigo   | docker | 7860     | false  |
+---
+title: Smart Code Generator
+emoji: ""
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+sdk_version: "latest"
+app_file: app.py
+pinned: false
+---
 
-# Smart Code Generator  Backend
+# Smart Code Generator Backend
 
 <div align="center">
 
