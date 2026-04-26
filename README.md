@@ -1,8 +1,6 @@
 ---
 title: Smart Code Generator
 emoji: ""
-colorFrom: blue
-colorTo: indigo
 sdk: docker
 sdk_version: "latest"
 app_file: app.py
