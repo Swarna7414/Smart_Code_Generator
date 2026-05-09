@@ -111,16 +111,16 @@ The server reads one required environment variable.
 
 | Variable       | Description                                    |
 |----------------|------------------------------------------------|
-| `GROQ_API_KEY` | Your Groq API key. The server will not work without it. |
+| `GROQ_API_KEY` | I can't display it here |
 
 Set it before starting the server.
 
 ```bash
 # Windows PowerShell
-$env:GROQ_API_KEY = "your_api_key_here"
+$env:GROQ_API_KEY = "Please get your own : ) "
 
 # macOS and Linux
-export GROQ_API_KEY="your_api_key_here"
+export GROQ_API_KEY="Please get your own ha ha ha : ) "
 ```
 
 ---
